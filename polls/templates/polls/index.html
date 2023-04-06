@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>This is templates</h1>
+    <p>Hello world. Myname is <b>{{name}}</b></p>
+    <p><b>My Skill programing language:</b></p>
+    <ul>
+    {% for  item in skill %}
+        {% if item != 'django' %}
+            <li>{{ item }}</li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+</body>
+</html>
