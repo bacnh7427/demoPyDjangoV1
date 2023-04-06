@@ -4,11 +4,9 @@
     <h1>This is templates</h1>
     <p>Hello world. Myname is <b>{{name}}</b></p>
     <p><b>My Skill programing language:</b></p>
-    <ul>
-    {% for  item in skill %}
-        {% if item != 'django' %}
+   <ul>
+    {% for item in skill %}
             <li>{{ item }}</li>
-        {% endif %}
     {% endfor %}
     </ul>
 {% endblock %}
