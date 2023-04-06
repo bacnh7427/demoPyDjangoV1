@@ -23,5 +23,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('viewlist/', views.viewlist, name='view_list'),
     path('detail/<int:question_id>', views.detailView, name='detail'),
-
+    path('<int:question_id>', views.vote, name="vote")
 ]

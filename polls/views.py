@@ -24,6 +24,16 @@ def detailView(request, question_id):
     q = Question.objects.get(pk=question_id)
     return render(request, "polls/detail_question.html", {"qs":q})
 
+def vote(request, question_id):
+    q = Question.objects.get(pk=question_id)
+    try:
+        data = request.POST("choice")
+        c = q.choice_set.get(pk=data)
+    except:
+        HttpResponse("Lỗi khôgn có choice")
+    c.vote = c.vote + 1
+    c.save()
+    return HttpResponse(c.vote)
 
 def getUser(request):
     return HttpResponse("<h1>Get all User vote</h1>")
