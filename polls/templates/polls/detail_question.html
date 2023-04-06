@@ -2,13 +2,15 @@
 
 {% block content123 %}
     {% if qs %}
+        <h2>{{  qs.question_text }}</h2>
         <form action="">
             <ul>
                 {% for item in qs.choice_set.all %}
                     <li>
-                        <input type="radio" value="{{ item.id }}">{{ item.choice_text }}</input>
+                        <input type="radio" value="{{ item.id }}" name="choice">{{ item.choice_text }}
                     </li>
                 {% endfor %}
+                <input type="submit" value="Submit">
             </ul>
         </form>
     {% endif %}
