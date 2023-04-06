@@ -20,4 +20,5 @@ from django.urls import path
 urlpatterns = [
     path('', views.index),
     path('getuser/', views.getUser),
+    path('about/', views.about),
 ]
