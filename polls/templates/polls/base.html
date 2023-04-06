@@ -9,6 +9,26 @@
         background-color: #ccc;
         color: #fff
       }
+      .menu {
+        background-color: #234;
+        color: #FFF;
+      }
+      .menu ul{
+        list-style-type: none;
+      }
+      .menu ul li{
+        float: left;
+        padding: 6px 7px;
+      }
+      .menu ul li:hover{
+        background-color: #CCC;
+        color: #000;
+      }
+      .menu:after{
+          clear: both;
+          display: table;
+          content: "";
+      }
     </style>
 </head>
 <body>
@@ -16,10 +36,12 @@
       <h1>Django Demo Website</h1>
   </div>
   <div class="menu">
-      <li>Home</li>
-      <li>About</li>
-      <li>Home</li>
-      <li>Home</li>
+      <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Product</li>
+          <li>Contact</li>
+      </ul>
   </div>
 <div class="content">
     {% block content123 %}
