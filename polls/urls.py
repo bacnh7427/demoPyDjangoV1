@@ -22,4 +22,6 @@ urlpatterns = [
     path('getuser/', views.getUser,  name='get_user'),
     path('about/', views.about, name='about'),
     path('viewlist/', views.viewlist, name='view_list'),
+    path('detail/<int:question_id>', views.detailView, name='detail'),
+
 ]
