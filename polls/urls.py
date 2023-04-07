@@ -17,6 +17,7 @@ Including another URLconf
 from . import views
 from django.urls import path
 
+app_name = 'polls'
 urlpatterns = [
     path('', views.index, name='index'),
     path('getuser/', views.getUser,  name='get_user'),
