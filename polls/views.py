@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Question
+from .models import Question, Choice
 
 # Create your views here.
 def index(request):
@@ -26,14 +26,15 @@ def detailView(request, question_id):
 
 def vote(request, question_id):
     q = Question.objects.get(pk=question_id)
+    # c = Choice()
     try:
-        data = request.POST("choice")
+        data = request.POST["choice"]
         c = q.choice_set.get(pk=data)
     except:
         HttpResponse("Lỗi khôgn có choice")
     c.vote = c.vote + 1
     c.save()
-    return HttpResponse(c.vote)
+    return render(request, "polls/result.html", {"q":q})
 
 def getUser(request):
     return HttpResponse("<h1>Get all User vote</h1>")
