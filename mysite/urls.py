@@ -21,5 +21,5 @@ urlpatterns = [
     path('polls/', include("polls.urls")),
     path('admin/', admin.site.urls),
     path('news/', include("news.urls")),
-    # path('about/', include("polls.urls"))
+    path('login/', include("login.urls")),
 ]
