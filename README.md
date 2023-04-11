@@ -1,6 +1,6 @@
 ***
-Python Django tutorials
-***
+<h1>Python Django tutorials</h1>
+
 - Cài đặt Django lên máy:
   - Pip install django
 - Tạo project Python trên Pycharm (có thể dùng bản comunity)
@@ -17,7 +17,7 @@ Python Django tutorials
   - Add thêm urls và khai báo thông tin component con trong settings.py của app chính
   - Chỉnh sửa các thứ trong file: views.py, urls.py
     - Views.py là khai báo các hàm xử lý (controller)
-    - urls.py (routes)
+    - urls.py (routes). Lưu ý có urls trong componetn và urls trong source chính
     - khai báo html có thể tạo thư mục templates/ và vứt trong đấy
 - Lệnh migrations DB:
   - python manage.py makemigrations
