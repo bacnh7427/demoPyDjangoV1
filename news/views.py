@@ -14,13 +14,17 @@ class IndexView(View):
         return HttpResponse(dt)
 
 
-class SendData(View):
+# class SendData(View):
+#     def get(self, request):
+#         post_data = PostForm()
+#         return render(request, 'news/add_news.html', {'f': post_data})
+
+
+class ProcessData(View):
     def get(self, request):
         post_data = PostForm()
         return render(request, 'news/add_news.html', {'f': post_data})
 
-
-class SaveData(View):
     def post(self, request):
         g = PostForm(request.POST)
         if g.is_valid():
@@ -28,6 +32,9 @@ class SaveData(View):
             return HttpResponse('Data saved. OK!')
         else:
             return HttpResponse('Data not validate')
+
+    def put(self):
+        pass
 
 
 def email_view(request):
