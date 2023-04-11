@@ -3,12 +3,12 @@
 
 - Cài đặt Django lên máy:
 ```
-  - Pip install django
+  Pip install django
 ```
 - Tạo project Python trên Pycharm (có thể dùng bản comunity)
 - Tạo project django: 
 ```
-  - django-admin startproject demoform
+  django-admin startproject demoform
 ``` 
 - Tạo 1 component trong project django
 ```
@@ -16,8 +16,8 @@
 ```     
 - Chạy server: bằng 1 trong 2 command dưới
 ```
-  - python manage.py runserver 
-  - python manage.py runserver 127.0.0.1:9000
+  python manage.py runserver 
+  python manage.py runserver 127.0.0.1:9000
 ```
 ***
 - Trong quá trình làm:
@@ -30,16 +30,16 @@
 ***
 - Lệnh migrations DB:
 ```
-  - python manage.py makemigrations
-  - python manage.py migrate
+  python manage.py makemigrations
+  python manage.py migrate
 ```
 - Create super user:
 ```
-  - python manage.py createsuperuser
-  - Xong thì nhập super user trên admin
+  python manage.py createsuperuser
 ```
-- Khai báo trong 
-- Xử lý trong file urls.py:
+-  Xong thì nhập super user trên admin
+
+- Khai báo xong thì xử lý trong file urls.py:
 
 - Riêng thằng views.py:
     - Xử lý có thể sử dụng function viết theo thể thức function
